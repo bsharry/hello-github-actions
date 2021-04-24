@@ -2,7 +2,7 @@ FROM debian:9.5-slim
 
 ADD entrypoint.sh /entrypoint.sh
 RUN apt update
-RUN apt install sl
+RUN apt install -y sl
 RUN sl
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
